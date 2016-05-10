@@ -1,0 +1,10 @@
+Kernel programming vs system programming vs device driver programming.
+
+1. Kernel developers focus on interfaces, data structures, algorithms,
+   and optimization for the core of the operating system.
+
+2. System programmers write daemons, utilities, and other tools for 
+   automating common or difficult tasks.
+
+3. Device drivers use the interfaces and data structures written by the
+   kernel developers to implement device control and IO.
