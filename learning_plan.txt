@@ -1,0 +1,12 @@
+The plan is to learn device driver development in a systematic way
+by learning all the prerequisites and by carrying out a series of
+projects on each topic.
+
+The aim is to to learn embedded system internals - everything including kernel,
+I/O interfaces, communication protocols, device driver development etc.
+
+=======================================================================
+
+Project_1 -- Linux System Administration
+
+Project_2 -- 
