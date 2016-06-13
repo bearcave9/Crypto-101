@@ -1,13 +1,10 @@
 #Linux Device Driver
 
-* A device driver is a program that controls a particular type of device that is attached to your computer.
+Device driver is a computer program that operates or controls a particular type of device that is attached to a computer. A driver provides a software interface to hardware devices, enabling operating systems and other computer programs to access hardware functions without needing to know precise details of the hardware being used.
  
 Important Concepts-
 -----------------
 * C Programming
 * Microprocessor programming
-* Linux Kernel
+* Operating Systems/ Linux Kernel
 
-Tutorials-
----------
-* http://opensourceforu.com/tag/linux-device-drivers-series/page/2/
