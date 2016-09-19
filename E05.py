@@ -27,5 +27,6 @@ print "If I add %d, %d, and %d I get %d." %(my_age, my_height,
 	my_weight, my_age + my_height+ my_weight)
 
 # %r -- print this no matter what
+print "I'm %r years old." % my_age
 
-print round(1.7333) #Rounding a floating point number
+print round(1.7333) # Rounding a floating point number
