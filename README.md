@@ -3,34 +3,23 @@
 * Writing all the codes
 * 52 execrises
 
-# Summary
----------------------------------------------------------------------
+# Other Python features
 
-## Ex-1
-* print
+## The difference between sys.stdout.write and print
+* http://stackoverflow.com/questions/3263672/python-the-difference-between-sys-stdout-write-and-print
 
-## Ex-2
-* comment
-* # or """
+print is just a thin wrapper that formats the inputs (space between args and newline at the end) and calls the write function of a given object. By default this object is sys.stdout, but you can pass a file for example:
 
-## Ex-3
-* Maths - / (division) drops fractional part for integers 
-* PEMDAS - Parantheses, Exponentiation, Multiplication, Addition, Subtraction
-* Prefer numpy library for exponentiation etc.
+print >> open('file.txt', 'w'), 'Hello', 'World', 2+3
+In Python 3.x, print becomes a function, but it is still possible to pass something else than sys.stdout. See http://docs.python.org/library/functions.html.
 
-## Ex-4
-* variables
+In Python 2.6+, print is still a statement, but it can be used as a function with
 
-## Ex-5
-* formatter -- %d, %s, %r
-* print round(1.7333) # Rounding a floating point number
+from __future__ import print_function
+Update: There is a little difference between the print function and the print statement (and more generally between a function and a statement) pointed by Bakuriu in comments.
 
-## Ex-6
-* strings
+In case of error when evaluating arguments:
 
-## Ex-7,8,9
-* more about printing
-* \n doesn't work with %r
+print "something", 1/0, "other" #prints only something because 1/0 raise an Exception
 
-## Ex-10
-* Escape sequences
+print("something", 1/0, "other") #doesn't print anything. The func is not called
