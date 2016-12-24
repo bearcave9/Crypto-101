@@ -33,7 +33,7 @@ print "Is it less or equal?", 5<=-2
 print "5/7 :", 5/7
 print "5.0/7.0 :", 5.0/7.0
 
-# PEDMAS--Parantheses, Exponentiation, Multiplication,
+# PEMDAS--Parantheses, Exponentiation, Multiplication,
 # Division, Addition, Subtraction
 
 # Prefer numpy library for exponentiation etc.
