@@ -19,3 +19,12 @@ In Python 2.7, ``` print ``` is still a statement, but it can be used as a funct
 
  ``` print "something", 1/0, "other" ``` #prints only something because 1/0 raise an Exception. <br>
  ``` print("something", 1/0, "other") ``` #doesn't print anything. The func is not called
+ 
+ 
+
+There's at least one situation in which you want sys.stdout instead of print.
+
+When you want to overwrite a line without going to the next line, for instance while drawing a progress bar or a status message, you need to loop over something like
+
+Note carriage return-> "\rMy Status Message: %s" % progress
+And since print adds a newline, you are better off using sys.stdout.
