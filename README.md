@@ -1,13 +1,15 @@
 
 # Other Python features
 
-##[The difference between sys.stdout.write and print]( http://stackoverflow.com/questions/3263672/python-the-difference-between-sys-stdout-write-and-print )
+##[sys.stdout.write vs print]( http://stackoverflow.com/questions/3263672/python-the-difference-between-sys-stdout-write-and-print )
 
- ``` print ``` is just a thin wrapper that formats the inputs (space between args and newline at the end) and calls the write function of a given object. By default this object is ``` sys.stdout ```, but you can pass a file for example:
+ ` print ` is just a thin wrapper that formats the inputs (space between args and newline at the end) and calls the `write` function of a given object. By default this object is ` sys.stdout `, but you can pass a file for example:
 
 ``` print >> open('file.txt', 'w'), 'Hello', 'World', 2+3 ```
 
- In Python 3.x, ``` print ``` becomes a function, but it is still possible to pass something else than sys.stdout. _See http://docs.python.org/library/functions.html_
+* While designing progress bar etc, we prefer `sys.stdout.write` as `print` introduces new line 
+
+## print as a function in python 2.7
 
 In Python 2.7, ``` print ``` is still a statement, but it can be used as a function with
 
@@ -21,10 +23,3 @@ In Python 2.7, ``` print ``` is still a statement, but it can be used as a funct
  ``` print("something", 1/0, "other") ``` #doesn't print anything. The func is not called
  
  
-
-There's at least one situation in which you want sys.stdout instead of print.
-
-When you want to overwrite a line without going to the next line, for instance while drawing a progress bar or a status message, you need to loop over something like
-
-Note carriage return-> "\rMy Status Message: %s" % progress
-And since print adds a newline, you are better off using sys.stdout.
